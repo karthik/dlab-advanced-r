@@ -10,7 +10,11 @@ Wait, we already did that!
 
 ## Then some functions
 
+For this part please follow the etherpad
+
 ## Then let's document these functions
+
+Please do that on your own when we get to this part. I'll post a complete solution back here at a later time.
 
 ## Create a R package skeleton
 
@@ -59,7 +63,7 @@ options(devtools.desc.license = "CC0")
 Here's an example `DESCRIPTION` file
 
 ```coffee
-ackage: rfisheries
+Package: rfisheries
 Title: R interface for fisheries data
 Version: 0.0.5
 Date: 2013-08-01
@@ -82,7 +86,7 @@ Collate:
     'species_codes.R'
 ```
 
-This automatically populates me as the author along with my preferred license every time I create a new package. Without this setting, you'll have to manually open and edit the `DESCRIPTION` file.
+This automatically populates me as the author along with my preferred license every time I create a new package from my computer. You are always free to edit the `DESCRIPTION` file manually. 
 
 
 ## Then update documentation
@@ -93,11 +97,19 @@ If you're already running R from inside the working directory, simply run
 document(".")
 check_doc()
 ```
-This will identify any problems with missing documentation, any variables that are declared but not part of your `roxygen2` markup.
+This will identify any problems with missing documentation, any variables that are declared but not part of your `roxygen2` markup etc.
 
 ## Add some data to the package itself
 
+You can also include data as part of your package in a folder called `/data`.  Then add documentation to any `.R` file (usually `packagename.R`) like so:
 
+```
+#' @docType data
+#' @keywords datasets
+#' @name name_of_dataset
+#' @usage data(name_of_dataset)
+#' @format A data table with x rows and x variables
+```
 
 ## Test it again
 
@@ -116,7 +128,7 @@ check()
 
 This is equivalent to `R CMD CHECK` but will also run all the tests, update all documentation as necessary, check everything and report any errors that might occur.
 
-## Write some vignettes
+## Write some Vignettes
 
 Vignettes are long form documentation for your package. Want to describe a few use-cases along with example data on how someone might use your package? Write a script in markdown with the extension `.Rmd` and place it in your `vignettes/` folder inside the package. Vignettes will get compiled to html during package build.
 
