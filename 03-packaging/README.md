@@ -118,11 +118,13 @@ This is equivalent to `R CMD CHECK` but will also run all the tests, update all 
 
 ## Write some vignettes
 
+Vignettes are long form documentation for your package. Want to describe a few use-cases along with example data on how someone might use your package? Write a script in markdown with the extension `.Rmd` and place it in your `vignettes/` folder inside the package. Vignettes will get compiled to html during package build.
+
 ```coffee
 VignetteBuilder: knitr
 Suggests: knitr
-
 ```
+To build your vignette:
 
 ```
 build_vignette()
