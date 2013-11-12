@@ -37,7 +37,7 @@ What are the downsides of sharing data this way?
 ```coffee
 library(rfigshare)
 # If you don't have the package, run
-#install.packages(rfigshare)
+# install.packages(rfigshare)
 url <- fs_download(90818)
 new_data <- read.csv(url)
 ```
