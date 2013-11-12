@@ -108,7 +108,7 @@ expect_that(10, is_identical_to(10 + 1e-10))
 ```
 
 
-**3. `is_equivalent_to()` is a more relaxed version of equals()**
+**3. `is_equivalent_to()` is a more relaxed version of `equals()`**
 
 
 ```coffee
@@ -297,5 +297,15 @@ The minimal reporter prints:
 
 We can document functions inline using a simple markup that's not all that different from writing comments. In addition to helping others understand what your function does, we can use a little bit more syntax to easily turn these into function documentation if we decide to create a package. More in the next section.
 
+# Testing exercise
+
+1. Add tests for the functions you've created in this session.
+2. create a folder called `inst/tests` in the package root
+3. save tests into a single R script with the word `test` in the title or split them over multiple test. 
+4. Group tests where necessary.
+5. Run tests from the R prompt using `test_dir()` or `test_file()` from the `test_that` package. Or if you have `devtools` loaded, then simply run `test()` 
+6. Did the tests fail? Hopefully since we haven't yet written the functions. We'll do that in the next step.
+
+*Place your green sticky on your laptop once finished*
 
 
