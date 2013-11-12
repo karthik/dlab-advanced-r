@@ -67,80 +67,51 @@ We'll use the `testthat` package to make testing a little easier. The hierarchy 
 
 **1. `equals()` Equality with a numerical tolerence**
 
-
-```r
+```{r}
 library(testthat)
 # passes
 expect_that(10, equals(10))
 # passes
-expect_that(10, equals(10 + 1e-07))
+expect_that(10, equals(10 + 1e-7))
 # Fails
-expect_that(10, equals(10 + 1e-06))
-```
-
-```
-## Error: 10 not equal to 10 + 1e-06
-## Mean relative difference: 1e-07
-```
-
-```r
+expect_that(10, equals(10 + 1e-6))
 # Definitely fails!
 expect_that(10, equals(11))
 ```
 
-```
-## Error: 10 not equal to 11
-## Mean relative difference: 0.09091
-```
-
-
 **2. `is_identical_to`:  Exact quality with identical**
 
-
-```r
+```{r}
 expect_that(10, is_identical_to(10))
 expect_that(10, is_identical_to(10 + 1e-10))
 ```
 
-```
-## Error: 10 is not identical to 10 + 1e-10. Differences: 
-## Objects equal but not identical
-```
-
-
 **3. `is_equivalent_to()` is a more relaxed version of equals()**
 
-
-```r
+```{r}
 # ignores attribute names
-expect_that(c(one = 1, two = 2), is_equivalent_to(1:2))
+expect_that(c("one" = 1, "two" = 2), is_equivalent_to(1:2))
 ```
-
 
 **4. `is_a()` checks that an object inherit()s from a specified class**  
 
-
-```r
+```{r}
 model <- lm(mpg ~ cyl, mtcars)
 expect_that(model, is_a("lm"))
 ```
 
 
-
 **5. `matches()` matches a character vector against a regular expression.**
 
-
-```r
+```{r}
 string <- "Testing is fun!"
 # Passes
 expect_that(string, matches("Testing"))
 ```
 
-
 **6. `prints_text()` matches the printed output from an expression against a regular expression**
 
-
-```r
+```{r}
 a <- list(1:10, letters)
 # Passes
 expect_that(str(a), prints_text("List of 2"))
@@ -149,55 +120,37 @@ expect_that(str(iris), prints_text("data.frame"))
 ```
 
 
-
 **7. `shows_message()` checks that an expression shows a message**
 
-
-```r
-expect_that(library(mgcv), shows_message("This is mgcv"))
+```{r}
+expect_that(library(mgcv),
+shows_message("This is mgcv"))
 ```
-
 
 **8. `gives_warning()` expects that you get a warning**
 
-
-```r
+```{r}
 expect_that(log(-1), gives_warning())
-expect_that(log(-1), gives_warning("NaNs produced"))
+expect_that(log(-1),
+  gives_warning("NaNs produced"))
 # Fails
 expect_that(log(0), gives_warning())
 ```
 
-```
-## Error: log(0) no warnings given
-```
-
-
 **9. `throws_error()` verifies that the expression throws an error. You can also supply a regular expression which is applied to the text of the error**
 
-
-```r
-expect_that(1/2, throws_error())
-```
-
-```
-## Error: 1/2 code did not generate an error
-```
-
-```r
+```{r}
+expect_that(1 / 2, throws_error())
 expect_that(seq_along(1:NULL), throws_error())
 ```
 
 
-
 **10. `is_true()` is a useful catchall if none of the other expectations do what you want -it checks that an expression is true**
 
-
-```r
+```{r}
 x <- require(ggplot2)
 expect_that(x, is_true())
 ```
-
 
 This entire suite of tests can also be shortened.
 
@@ -222,35 +175,35 @@ This entire suite of tests can also be shortened.
 
 Basic syntax
 
-
-```r
+```{r, eval = FALSE}
 test_that("a description for the test suite", {
-    # load all necessary objects and variables ...  run tests run more tests
+# load all necessary objects and variables
+# ...
+# run tests
+# run more tests
 })
 ```
-
 
 A full example
 
 
-
-```r
+```{r, eval = FALSE}
 context("String length")
+
 test_that("str_length is number of characters", {
-    expect_that(str_length("a"), equals(1))
-    expect_that(str_length("ab"), equals(2))
-    expect_that(str_length("abc"), equals(3))
+  expect_that(str_length("a"), equals(1))
+  expect_that(str_length("ab"), equals(2))
+  expect_that(str_length("abc"), equals(3))
 })
 test_that("str_length of missing is missing", {
-    expect_that(str_length("NA"), equals(2))
+  expect_that(str_length("NA"), equals(2))
 })
 test_that("str_length of factor is length of level", {
-    expect_that(str_length(factor("a")), equals(1))
-    expect_that(str_length(factor("ab")), equals(2))
-    expect_that(str_length(factor("abc")), equals(3))
+  expect_that(str_length(factor("a")), equals(1))
+  expect_that(str_length(factor("ab")), equals(2))
+  expect_that(str_length(factor("abc")), equals(3))
 })
 ```
-
 
 
 ## Running tests
@@ -259,24 +212,21 @@ Save all tests in a folder. In the case of a package, the folder is located unde
 
 Run using one of the following:
 
-
-```r
+```{r, eval = FALSE}
 test_file("test-str_length.r")
-test_dir("path/to/test/folder")
-test_dir("path/to/test/folder", "minimal")
+test_dir('path/to/test/folder')
+test_dir('path/to/test/folder', "minimal")
+
 source("test-str_length.r")
 ```
 
-
 ## Load and test package
 
-
-```r
+```{r, eval = FALSE}
 library(testthat)
 library(package_name)
 test_package("package_name")
 ```
-
 
 ## Automatic testing
 
