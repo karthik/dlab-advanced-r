@@ -30,3 +30,9 @@ library(devtools)
 install_github("hadley/testthat")
 install_github("hadley/assertthat")
 ```
+
+Some advice from one of the participants (Magdalena S.)
+
+For all, that might end trouble shooting a combination of Xcode5.0 and Mavericks (documented in the following thread: [http://stackoverflow.com/questions/19503995/error-when-with-xcode-5-0-and-rcpp-command-line-tools-are-installed/19505397#19505397](http://stackoverflow.com/questions/19503995/error-when-with-xcode-5-0-and-rcpp-command-line-tools-are-installed/19505397#19505397)), inclusion of `~/.R/Makevars` file with the flags given in Romain's post (#2), should solve the issue.
+(XCode5.0 does not include `llvm-gcc` anymore).
+Best, 
