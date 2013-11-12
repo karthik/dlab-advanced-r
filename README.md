@@ -1,6 +1,9 @@
-# D - lab advanced R workshop
+# D-lab R workshop
 
-November 12th, 350 Barrows Hall.
+**Objectives**: Teach participants a few ways to acquire data directly into R from the web, the importance of unit testing and documentation. Towards the end we will implement all these practices into a fully tested, documented and installable R package.
+
+
+*November 12th, 350 Barrows Hall.*
 
 
 ## Schedule of topics
