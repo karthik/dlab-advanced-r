@@ -1,7 +1,7 @@
-markdown: 01-testing/README.md
+markdown: 02-testing/README.md
 
-01-testing/README.md: 01-testing/README.Rmd
-	cd 01-testing; Rscript -e "library(knitr); knit('README.Rmd')"
+02-testing/README.md: 02-testing/README.Rmd
+	cd 02-testing;Rscript -e "library(knitr); knit('README.Rmd') "
 
 
 
