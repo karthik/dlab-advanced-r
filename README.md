@@ -12,6 +12,7 @@ November 12th, 350 Barrows Hall.
 | [Documentation](https://github.com/karthik/dlab-advanced-r/blob/master/03-documentation/README.md) | How to document your functions with `roxygen2` |
 | [Package development](https://github.com/karthik/dlab-advanced-r/blob/master/04-packaging/README.md) | Create and deploy packages with `devtools` and `GitHub` |
 
+If you're still having trouble getting everything installed, please take a look at some i[nstallation instructions](installation.md) and notes.
 
 [Etherpad for discussion in class](https://etherpad.mozilla.org/dlabr). Please open this link in a new browser, and enter your name on the right.
 
