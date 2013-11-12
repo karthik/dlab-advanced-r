@@ -12,7 +12,7 @@ library(devtools)
 has_devel()
 ```  
 
-and it returns TRUE, you’re all set. If it throws up an error, you will have to install or update xcode on a mac (It’s free from Apple. Find it on the mac app store). Please also open xcode, go to the settings > Downloads and install the command line tools. If you are on a PC  you’ll have to install `RTools` ([http://cran.r-project.org/bin/windows/Rtools/](http://cran.r-project.org/bin/windows/Rtools/))
+and it returns `TRUE`, you’re all set. If it throws up an error, you will have to install or update xcode on a mac (It’s free from Apple. Find it on the mac app store). Please also open xcode, go to the Settings > Downloads and install the **Command Line Tools**. If you are on a PC  you’ll have to install `RTools` ([http://cran.r-project.org/bin/windows/Rtools/](http://cran.r-project.org/bin/windows/Rtools/))
 
 If you’re on Linux, then run:
 

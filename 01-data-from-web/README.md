@@ -57,5 +57,9 @@ Take 5 minutes to look through the page.
 The answer to the second question will help us determine what tests to write. We will live code the functions in the etherpad.
 
 
+---
+
+For the rest of the workshop, create a new folder on your computer. Call it something meaningful. Save whatever work you do for the rest of the afternoon inside that folder because we will turn the whole thing into a installable R package before the end of the session.
+
 
 
