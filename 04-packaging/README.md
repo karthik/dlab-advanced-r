@@ -46,7 +46,7 @@ This file contains all the important meta-data about your package, including:
 
 * A package title
 * A package description
-* * The authors (and collaborators, contributers)
+* The authors (and collaborators, contributers)
 * Version numbers
 * Dependencies
 * Functions imported from other packages
