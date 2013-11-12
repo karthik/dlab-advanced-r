@@ -1,5 +1,3 @@
-
-
 # D - lab advanced R workshop
 
 November 12th, 350 Barrows Hall.

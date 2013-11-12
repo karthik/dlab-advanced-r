@@ -39,7 +39,7 @@ The longer answer is that testing either before or after your software is writte
 
 ![](why-test.png)
 
-Source: [Geek & Poke](http://geek-and-poke.com/?offset=1352247302000)
+Source: [Geek & Poke](http://geek-and-poke.com/geekandpoke/2012/9/16/simply-explained.html)
 
 ## Why testing is important?
 
