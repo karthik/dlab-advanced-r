@@ -17,6 +17,6 @@
 
 If you're still having trouble getting everything installed, please take a look at some i[nstallation instructions](installation.md) and notes.
 
-[Etherpad for discussion in class](https://etherpad.mozilla.org/dlabr). Please open this link in a new browser, and enter your name on the right.
+[Etherpad for discussion in class](https://etherpad.mozilla.org/dlabr). Please open this link in a new browser tab, and enter your name on the right.
 
 After the workshop is done please feel free to clone this repository if you know `Git`. Otherwise simply hit `Download ZIP` on the right to grab a full copy. Any contributions or suggestions are welcome as issues or pull requests.
