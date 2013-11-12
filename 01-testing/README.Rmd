@@ -86,7 +86,7 @@ expect_that(10, is_identical_to(10))
 expect_that(10, is_identical_to(10 + 1e-10))
 ```
 
-**3. `is_equivalent_to()` is a more relaxed version of equals()**
+**3. `is_equivalent_to()` is a more relaxed version of `equals()`**
 
 ```{r}
 # ignores attribute names
@@ -245,7 +245,7 @@ The minimal reporter prints:
 
 # Documenting functions
 
-We can document functions inline using a simple markup that's not all that different from writing comments. In addition to helping others understand what your function does, we can use a little bit more syntax to easily turn these into function documentation if we decide to create a package. More on this on Thursday.
+We can document functions inline using a simple markup that's not all that different from writing comments. In addition to helping others understand what your function does, we can use a little bit more syntax to easily turn these into function documentation if we decide to create a package. More in the next section.
 
 
 

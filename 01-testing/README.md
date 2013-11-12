@@ -68,7 +68,7 @@ We'll use the `testthat` package to make testing a little easier. The hierarchy 
 **1. `equals()` Equality with a numerical tolerence**
 
 
-```r
+```coffee
 library(testthat)
 # passes
 expect_that(10, equals(10))
@@ -83,7 +83,7 @@ expect_that(10, equals(10 + 1e-06))
 ## Mean relative difference: 1e-07
 ```
 
-```r
+```coffee
 # Definitely fails!
 expect_that(10, equals(11))
 ```
@@ -97,7 +97,7 @@ expect_that(10, equals(11))
 **2. `is_identical_to`:  Exact quality with identical**
 
 
-```r
+```coffee
 expect_that(10, is_identical_to(10))
 expect_that(10, is_identical_to(10 + 1e-10))
 ```
@@ -111,7 +111,7 @@ expect_that(10, is_identical_to(10 + 1e-10))
 **3. `is_equivalent_to()` is a more relaxed version of equals()**
 
 
-```r
+```coffee
 # ignores attribute names
 expect_that(c(one = 1, two = 2), is_equivalent_to(1:2))
 ```
@@ -120,7 +120,7 @@ expect_that(c(one = 1, two = 2), is_equivalent_to(1:2))
 **4. `is_a()` checks that an object inherit()s from a specified class**  
 
 
-```r
+```coffee
 model <- lm(mpg ~ cyl, mtcars)
 expect_that(model, is_a("lm"))
 ```
@@ -130,7 +130,7 @@ expect_that(model, is_a("lm"))
 **5. `matches()` matches a character vector against a regular expression.**
 
 
-```r
+```coffee
 string <- "Testing is fun!"
 # Passes
 expect_that(string, matches("Testing"))
@@ -140,7 +140,7 @@ expect_that(string, matches("Testing"))
 **6. `prints_text()` matches the printed output from an expression against a regular expression**
 
 
-```r
+```coffee
 a <- list(1:10, letters)
 # Passes
 expect_that(str(a), prints_text("List of 2"))
@@ -153,7 +153,7 @@ expect_that(str(iris), prints_text("data.frame"))
 **7. `shows_message()` checks that an expression shows a message**
 
 
-```r
+```coffee
 expect_that(library(mgcv), shows_message("This is mgcv"))
 ```
 
@@ -161,7 +161,7 @@ expect_that(library(mgcv), shows_message("This is mgcv"))
 **8. `gives_warning()` expects that you get a warning**
 
 
-```r
+```coffee
 expect_that(log(-1), gives_warning())
 expect_that(log(-1), gives_warning("NaNs produced"))
 # Fails
@@ -176,7 +176,7 @@ expect_that(log(0), gives_warning())
 **9. `throws_error()` verifies that the expression throws an error. You can also supply a regular expression which is applied to the text of the error**
 
 
-```r
+```coffee
 expect_that(1/2, throws_error())
 ```
 
@@ -184,7 +184,7 @@ expect_that(1/2, throws_error())
 ## Error: 1/2 code did not generate an error
 ```
 
-```r
+```coffee
 expect_that(seq_along(1:NULL), throws_error())
 ```
 
@@ -193,7 +193,7 @@ expect_that(seq_along(1:NULL), throws_error())
 **10. `is_true()` is a useful catchall if none of the other expectations do what you want -it checks that an expression is true**
 
 
-```r
+```coffee
 x <- require(ggplot2)
 expect_that(x, is_true())
 ```
@@ -223,7 +223,7 @@ This entire suite of tests can also be shortened.
 Basic syntax
 
 
-```r
+```coffee
 test_that("a description for the test suite", {
     # load all necessary objects and variables ...  run tests run more tests
 })
@@ -234,7 +234,7 @@ A full example
 
 
 
-```r
+```coffee
 context("String length")
 test_that("str_length is number of characters", {
     expect_that(str_length("a"), equals(1))
@@ -260,7 +260,7 @@ Save all tests in a folder. In the case of a package, the folder is located unde
 Run using one of the following:
 
 
-```r
+```coffee
 test_file("test-str_length.r")
 test_dir("path/to/test/folder")
 test_dir("path/to/test/folder", "minimal")
@@ -271,7 +271,7 @@ source("test-str_length.r")
 ## Load and test package
 
 
-```r
+```coffee
 library(testthat)
 library(package_name)
 test_package("package_name")
@@ -295,7 +295,7 @@ The minimal reporter prints:
 
 # Documenting functions
 
-We can document functions inline using a simple markup that's not all that different from writing comments. In addition to helping others understand what your function does, we can use a little bit more syntax to easily turn these into function documentation if we decide to create a package. More on this on Thursday.
+We can document functions inline using a simple markup that's not all that different from writing comments. In addition to helping others understand what your function does, we can use a little bit more syntax to easily turn these into function documentation if we decide to create a package. More in the next section.
 
 
 
