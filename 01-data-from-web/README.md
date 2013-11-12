@@ -51,7 +51,7 @@ Since there isn't enough time today to get into XML or web scraping, let's work 
 We'll try to rebuild the package `rfisheries` in class today. Here is the [API](http://openfisheries.org/api-info).
 
 Take 5 minutes to look through the page. 
-* How many functions can we write?
+* How many functions should we write?
 * What type of output should we expect from these functions?
 
 The answer to the second question will help us determine what tests to write. We will live code the functions in the etherpad.

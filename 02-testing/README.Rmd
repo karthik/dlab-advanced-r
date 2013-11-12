@@ -249,11 +249,11 @@ We can document functions inline using a simple markup that's not all that diffe
 
 # Testing exercise
 
-1. Add tests for the functions you've created in this session.
-2. create a folder called `inst/tests` in the package root
-3. save tests into a single R script with the word `test` in the title or split them over multiple test. 
-4. Group tests where necessary.
-5. Run tests from the R prompt using `test_dir()` or `test_file()` from the `test_that` package. Or if you have `devtools` loaded, then simply run `test()` 
+1. Add tests for the functions we've outlined from the previous section.
+2. create a folder called `inst/tests` in the package folder.
+3. save tests into a single R script with the word `test` in the title e.g. `test.R`. 
+4. Group tests where necessary using `context("what the context is")`.
+5. Run tests from the R prompt using `test_dir()` or `test_file()` from the `testthat` package. Or if you have `devtools` loaded, then simply run `test()` 
 6. Did the tests fail? Hopefully since we haven't yet written the functions. We'll do that in the next step.
 
 *Place your green sticky on your laptop once finished*
