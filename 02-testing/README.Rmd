@@ -1,7 +1,7 @@
 
 # Software Testing
 
-*With additional material from  by Katy Huff, Rachel Slaybaugh, and Anthony Scopatz* 
+*With additional material notes from Katy Huff, Rachel Slaybaugh, and Anthony Scopatz* 
 
 ## What is testing?
 
